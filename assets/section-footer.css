@@ -1,5 +1,7 @@
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/footer-bg.png?v=1666430019);
+  background-size: 100% 100%;
 }
 
 .footer:not(.color-background-1) {
@@ -43,6 +45,8 @@
 .footer__content-bottom {
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
   padding-top: 3rem;
+  background: #EAC868;
+  color: #333 !important;
 }
 
 .footer__content-bottom:only-child {

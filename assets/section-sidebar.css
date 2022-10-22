@@ -1,0 +1,44 @@
+#shopify-section-sidebar {
+    width: 220px;
+    color: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    background: rgba(255, 255, 255, .7);
+    text-align: center;
+}
+
+#shopify-section-sidebar ul li{
+    list-style: none;
+}
+
+#shopify-section-sidebar ul li:after{
+    content: "";
+    display: block;
+    height: 5px;
+    background-image: url(http://placehold.it/350x65);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+#shopify-section-sidebar ul li a {
+    padding: 10px 0;
+    display: block;
+    color: #333333;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    font: 14px;
+    text-decoration: none;
+}
+
+#shopify-section-sidebar ul li a:hover{
+    color: #B5811E;
+}
+
+.sidebar-logo{
+    width: 78px;
+    margin: 60px auto;
+}
+
+.mb-xlg{
+    margin-bottom: 120px;
+}

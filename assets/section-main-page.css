@@ -6,6 +6,11 @@
   margin-bottom: 3rem;
 }
 
+.page-section{
+  max-width: 832px;
+  margin: 0 auto 100px !important;
+}
+
 @media screen and (min-width: 750px) {
   .main-page-title {
     margin-bottom: 4rem;
@@ -20,4 +25,169 @@
 .page-placeholder {
   width: 52.5rem;
   height: 52.5rem;
+}
+
+.page-top-description{
+  width: 100%;
+  margin: auto;
+  background: #ffffffbf;
+  writing-mode: vertical-rl;
+  padding: 57px 105px 100px;
+  height: 608px;
+  display: flex;
+  align-items: center;
+  line-height: 3em;
+  letter-spacing: .2em;
+  margin-top: -184px !important;
+  z-index: 9;
+  position: relative;  
+}
+
+.section-title1{
+  font-size: 24px;
+  margin-bottom: 47px;
+}
+
+.page-section-title{
+  text-align: center;
+}
+
+.page-section-title span{
+  position: relative;
+}
+
+.section-title1 span:before,.section-title1 span:after{
+  content: '';
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+}
+
+.section-title1 span:before{
+  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset5.png?v=1666425008);
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%); 
+  width: 140px;
+  height: 40px;  
+
+}
+
+.section-title1 span:after{
+  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset2.png?v=1666425008);
+  width: 100px;
+  height: 25px;
+  right: -30%;
+  bottom: 0;
+  transform: translateX(100%);
+}
+
+.sub-title{
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.sub-title span:before{
+  content: '';
+  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset1.png?v=1666425008);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: block;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.section-title2{
+  font-size: 20px;
+  margin-bottom: 47px;
+}
+
+.section-title2 span:before,.section-title2 span:after{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  border-top: 1px solid #333;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.section-title2 span:before{
+  left: -55%;
+}
+
+.section-title2 span:after{
+  right: -55%;
+}
+
+.parallex{
+  /* Set a specific height */
+  min-height: 514px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.link-button{
+  border-radius: 10px;
+  border-radius: none;
+  width: 400px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.button-type1{
+  background: #333;
+  color: white !important;
+  margin-top: 100px;  
+}
+
+.button-type2{
+  background: #B5811E;
+  color: white !important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.reservation-box{
+  border: 1px solid #333333;
+}
+
+.reservation-box-inner{
+    max-width: 360px;
+    margin: auto;
+}
+
+#koshihikari{
+  margin-top: 76px;
+}
+
+.reservation-box .border-bottom{
+  padding-bottom: 17px;
+  bordrer: 1px solid #333;
+}
+
+.reservation-box .contact-info{
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+
+.reservation-box .contact-info img{
+  width: 24px;
+  margin-bottom: 0;
 }
