@@ -57,14 +57,15 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 57%;
+    width: 57%;    
+    justify-content: space-between;
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
-    padding: 0 0 0 4rem;
-    max-width: 35%;
-    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+    padding: 0 0 0 8rem;
+    max-width: 42%;
+    width: 42%;
   }
 
   .product--large:not(.product--no-media).product--right .product__info-wrapper {
@@ -635,7 +636,7 @@ a.product__text {
 
 @media screen and (min-width: 990px) {
   .product--stacked .product__media-item {
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: calc(20% - 7px);
   }
 
   .product:not(.product--columns) .product__media-list .product__media-item:first-child,
@@ -1244,3 +1245,74 @@ a.product__text {
   margin-left: 1.2rem;
   flex-shrink: 0;
 }
+
+.product{
+  padding: 0 1.5rem;
+}
+.product__title h1 {
+  font-size: 20px;
+}
+.price-wrapper{
+  border-bottom: 1px solid #B5811E;
+}
+.price--large{
+  display: inline-block;
+}
+.product__tax{
+  display: inline-block;
+}
+.line-item-property__field{
+  margin-top: 27px;  
+}
+.line-item-property__field input, .line-item-property__field select{
+  width: 300px;
+  height: 40px;  
+  border: none;
+  padding-left: 10px;
+  border: 1px solid #D8D8D8;
+}
+.line-item-property__field label{
+  display: block;
+  font-size: 14px;
+}
+.product-form__submit{
+  border-radius: 5px;
+  border: 1px solid #333333;
+  --border-offset: 0; 
+  height: 60px; 
+  max-width: 400px;
+}
+.gallery-description{
+  text-align: right;
+  font-size: 14px;
+  margin-top: 0px !important;
+  line-height: .5em;  
+}
+.product-metafields table{
+  margin-top: 45px;
+  width: 100%;
+}
+
+.product-metafields table td{
+  border-color: #D8D8D8;
+  color: #333333;
+  padding: 7px 0px 7px 20px;
+}
+.product-metafields table tr td:first-child{
+  background: #EEEEEE;
+  width: 21%;
+}
+.product-metafields table tr td:last-child{
+  background: white;
+}
+.product-metafields{
+  margin-top: 88px;
+}
+.quantity{
+  min-height: 40px;
+  min-width: 150px;
+}
+#MainProduct-template--16687744352539__main{
+  padding: 0;
+}
+

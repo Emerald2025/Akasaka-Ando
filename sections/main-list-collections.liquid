@@ -2,7 +2,6 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
   {%- liquid
     case section.settings.sort
       when 'products_high' or 'products_low'
@@ -22,13 +21,38 @@
     endif
   -%}
   {%- paginate collections by paginate_by -%}
-    <ul class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+    <div class="collection-list">
       {%- for collection in collections -%}
-        <li class="collection-list__item grid__item">
-          {% render 'card-collection', card_collection: collection, media_aspect_ratio: section.settings.image_ratio, columns: 3 %}
-        </li>
+        <div class="collection-wrapper">
+          <h3 class="collection-title"><span>{{ collection.title }}</span></h3>
+          <ul class="product-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+            {%- for product in collection.products -%}
+              <li class="collection-list__item grid__item">
+                <a
+                href="{{ product.url }}"
+                id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                class="full-unstyled-link"
+                aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }} NoMediaStandardBadge-{{ section_id }}-{{ product.id }}"
+                >
+                  <img src="{% if product.featured_media.size > 0 %}{{ product.featured_media | img_url: product_image_size, scale: product_image_scale }}{% else %}https://cdn.shopify.com/s/files/1/0668/2089/9130/files/no-image.png?v=1666617746{% endif %}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media"></a>
+                <a
+                href="{{ product.url }}"
+                id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                class="full-unstyled-link product-title""
+                aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }} NoMediaStandardBadge-{{ section_id }}-{{ product.id }}"
+                >{{ product.title }}</a>
+                <div class="price__regular">
+                  <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+                  <span class="price-item price-item--regular">
+                    <span class="price-value">{{ product.price }}</span><span class="price-desc">円(税込)</span>
+                  </span>
+                </div>                                       
+              </li>
+            {%- endfor -%} 
+          </ul>
+        </div>
       {%- endfor -%}
-    </ul>
+    </div>
     {% render 'pagination', paginate: paginate %}
   {%- endpaginate -%}
 </div>

@@ -1,10 +1,57 @@
 .collection-list {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 0 90px;
 }
 
 .collection-list-title {
   margin: 0;
+}
+
+.collection-list .grid--2-col-desktop .grid__item
+{
+  max-width: calc(50% - 20px);
+}
+
+.collection-title{
+  font-size: 20px;
+  margin: 116px 0 0;
+  text-align: center;
+}
+
+.collection-title span{
+  position: relative;
+}
+
+.collection-title span:before{
+  content: '';
+  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset1.png?v=1666425008);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: block;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.collection-list .grid--2-col-desktop .grid__item{
+  width: calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+.product-list{
+  justify-content: space-between;
+}
+
+.product-title{
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+
+.collection-list .collection-wrapper:last-child{
+  margin-bottom: 196px;
 }
 
 @media screen and (max-width: 749px) {
@@ -29,6 +76,65 @@
   width: 100%;
 }
 
+.collection-top-desc{
+  background: rgba(255,255,255,.8);
+  font-size: 20px;
+  max-width: 512px;
+  margin: auto;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+}
+
+.collection-top-desc p{
+  writing-mode: vertical-rl;
+}
+
+#Banner-template--16690664374586__c5698ba9-7ceb-4f69-950a-ea7e823eb39e .banner__media {
+  background-color: transparent;
+}
+
+#Banner-template--16690664374586__c5698ba9-7ceb-4f69-950a-ea7e823eb39e img{
+    max-width: 1200px;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#shopify-section-template--16690664374586__1972f04b-2d88-4bff-883d-897fbfb6fa35 .rich-text{
+  max-width: 512px;
+  margin: auto;
+  background: #ffffffbf;
+  margin: -214px auto 0;
+}
+
+.product-featured-media{
+  width: 100%;
+}
+
+.price__regular{
+  color: #B5811E;
+  line-height: 1em;
+  margin-top: 10px
+}
+
+.price__regular .price-value{
+  font-size: 32px;
+}
+
+.price__regular .price-unit{
+  font-size: 14px;
+}
+
+.collection-list__item.grid__item{
+  margin-top: 46px;
+}
+
+#shopify-section-template--16690664374586__1972f04b-2d88-4bff-883d-897fbfb6fa35 .rich-text__text.rte{
+    writing-mode: vertical-rl;
+    text-align: left;
+    margin: auto;
+    font-size: 20px;
+    line-height: 2.5em;
+}
 @media screen and (max-width: 749px) {
   .slider.collection-list--1-items {
     padding-bottom: 0;

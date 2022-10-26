@@ -14,6 +14,55 @@
   margin-bottom: 1.5rem;
 }
 
+
+#ContactForm{
+  max-width: 610px;
+  margin: auto;
+}
+.field__label{
+  display: none !important;
+}
+.contact .field:after{
+  display: none;
+}
+.contact .field {
+  display: flex;
+  padding: 40px 0;
+  border-bottom: 1px solid #B5811E;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contact .field label{
+
+}
+.contact .field__input{
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  max-width: 59%;
+  display: inline-block;
+  margin-left: 60px;
+}
+.contact.not-required .field__input{
+  margin-left: 95px;
+}
+.contact .field__input:focus{
+  padding: 0;
+}
+.required-mark{
+  color: white;
+  background: #B54434;
+  font-size: 12px;
+  margin-left: 15px;
+  padding: 4px 5px;
+}
+.contact__button button{
+    width: 400px;
+    height: 60px;
+    background: #333333;
+    border-radius: 10px;
+    --border-offset: 0;
+}
+
 @media screen and (min-width: 750px) {
   .contact .field {
     margin-bottom: 2rem;
@@ -22,18 +71,15 @@
 
 .contact__button {
   margin-top: 3rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 750px) {
   .contact__button {
-    margin-top: 4rem;
+    margin-top: 10rem;
   }
 }
 
-@media screen and (min-width: 750px) {
-  .contact__fields {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-  }
+.text-area.field__input{
+  min-height: 15rem;
 }

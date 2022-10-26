@@ -46,7 +46,6 @@
       onload="this.media='all'"
     >
   {%- endif -%}
-
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       <media-gallery
@@ -304,6 +303,34 @@
           </slider-component>
         {%- endif -%}
       </media-gallery>
+      <p class="gallery-description">※上記画像は調理・盛り付け例です</p>
+      <div class="product-metafields">
+        <p class="product-description">{{product.description}}</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>商品名</td>
+              <td>{{ product.title }}</td>
+            </tr>          
+            <tr>
+              <td>内容量</td>
+              <td>{{ product.metafields.custom.volume.value }}</td>
+            </tr>
+            <tr>
+              <td>賞味期限</td>
+              <td>{{ product.metafields.custom.expiration.value }}</td>
+            </tr>
+            <tr>
+              <td>原材料名</td>
+              <td>{{ product.metafields.custom.material.value }}</td>
+            </tr>
+            <tr>
+              <td>アレルゲン情報</td>
+              <td>{{ product.metafields.custom.allergy.value }}</td>
+            </tr>                                    
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <div
@@ -333,19 +360,19 @@
                 </a>
               </div>
             {%- when 'price' -%}
-              <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              <div class="no-js-hidden price-wrapper" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+                  <div class="product__tax caption rte">
+                    {%- if shop.taxes_included -%}
+                      {{ 'products.product.include_taxes' | t }}
+                    {%- endif -%}
+                    {%- if shop.shipping_policy.body != blank -%}
+                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}                
               </div>
-              {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                <div class="product__tax caption rte">
-                  {%- if shop.taxes_included -%}
-                    {{ 'products.product.include_taxes' | t }}
-                  {%- endif -%}
-                  {%- if shop.shipping_policy.body != blank -%}
-                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -378,8 +405,23 @@
                     {{ block.settings.page.content }}
                   </div>
                 </details>
-              </div>
+              </div>               
             {%- when 'quantity_selector' -%}
+              <p class="line-item-property__field">
+                <label>のし</label>
+                <select id="" name="properties[_のし]">
+                  <option value="無し">無し</option>
+                  <option value="有り">有り</option>
+                </select>
+              </p>
+              <p class="line-item-property__field">
+                <label for="">ご用向き</label>
+                <input id="" type="text" name="properties[_ご用向き]" placeholder="記入例：御祝">
+              </p>
+              <p class="line-item-property__field">
+                <label for="">名入れ</label>
+                <input id="" type="text" name="properties[_名入れ]" placeholder="記入例：赤坂　あんど">
+              </p>            
               <div
                 class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                 {{ block.shopify_attributes }}
@@ -411,7 +453,7 @@
                     {% render 'icon-plus' %}
                   </button>
                 </quantity-input>
-              </div>
+              </div>                        
             {%- when 'popup' -%}
               <modal-opener
                 class="product-popup-modal__opener no-js-hidden quick-add-hidden"
@@ -1002,7 +1044,6 @@
       </div>
     {%- endif -%}
   </div>
-
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div
       class="product-media-modal__dialog"
