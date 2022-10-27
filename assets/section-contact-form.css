@@ -17,7 +17,7 @@
 
 #ContactForm{
   max-width: 610px;
-  margin: auto;
+  margin: 118px auto 0;
 }
 .field__label{
   display: none !important;
@@ -42,7 +42,7 @@
   display: inline-block;
   margin-left: 60px;
 }
-.contact.not-required .field__input{
+.contact .not-required .field__input{
   margin-left: 95px;
 }
 .contact .field__input:focus{

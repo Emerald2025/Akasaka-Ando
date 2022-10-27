@@ -252,9 +252,49 @@
   </head>
 
   <body>
-    <div class="wrapper d-flex align-items-stretch">
-      {% if template == 'index' %}
-      {% else %}
+    {% if template == 'index' %}
+    {{ 'top.css' | asset_url | stylesheet_tag }}  
+    <div class="wrapper d-flex align-items-center page-top">          
+      <div class="top-content">
+        <div class="top-content-logo">
+          <img src="https://cdn.shopify.com/s/files/1/0667/7699/0014/files/logo.png?v=1666753407">
+        </div>
+        <div class="u-pc">
+          <div class="site-map col-4">
+            <a href="{{shop.url}}/pages/kodawari">こだわり</a>
+            <a href="{{shop.url}}/pages/cooking">料理</a>
+            <a href="{{shop.url}}/pages/kaiseki">会席</a>
+            <a href="{{shop.url}}/pages/store-info">店舗情報</a>
+          </div>
+          <div class="site-map col-3">
+            <a href="#section-reservation">ご予約</a>
+            <a href="{{shop.url}}/collections">オンライン<br>ショップ</a>
+            <a href="{{shop.url}}/pages/contact">お問い合わせ</a>   
+          </div>
+        </div>
+        <div class="u-sp">
+          <div class="site-map col-1">
+            <a href="{{shop.url}}/pages/kodawari">こだわり</a>            
+          </div> 
+          <div class="site-map col-2">
+            <a href="{{shop.url}}/pages/cooking">料理</a>
+            <a href="{{shop.url}}/pages/kaiseki">会席</a>            
+          </div> 
+          <div class="site-map col-1">
+            <a href="{{shop.url}}/pages/store-info">店舗情報</a>            
+          </div> 
+          <div class="site-map col-2">
+            <a href="#section-reservation">ご予約</a>
+            <a href="{{shop.url}}/collections">オンライン<br>&ensp;&ensp;&ensp;&ensp;ショップ</a>            
+          </div> 
+          <div class="site-map col-1">
+            <a href="{{shop.url}}/pages/contact">お問い合わせ</a>            
+          </div>                                                  
+        </div>  
+      </div>
+    </div>      
+    {% else %}
+    <div class="wrapper d-flex align-items-stretch">      
         {% section 'sidebar' %}
         <div id="content">     
           <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -264,12 +304,13 @@
           {%- if settings.cart_type == 'drawer' -%}
             {%- render 'cart-drawer' -%}
           {%- endif -%}
+          {% section 'header' %}          
           <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
             {{ content_for_layout }}
           </main>
 
           {% section 'footer' %}
-          <a class="to-top" onclick="window.scrollTo(0, 0);">    
+          <a class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">    
             <img src="{{ 'to-top.png' | asset_url }}">
           </a>
         </div>      

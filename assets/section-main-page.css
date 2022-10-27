@@ -39,8 +39,8 @@
   line-height: 3em;
   letter-spacing: .2em;
   margin-top: -184px !important;
-  z-index: 9;
-  position: relative;  
+  position: relative;
+  box-shadow: 0px 3px 6px #00000029;    
 }
 
 .section-title1{
@@ -115,15 +115,15 @@
   height: 1px;
   border-top: 1px solid #333;
   top: 50%;
-  transform: translate(-50%);
+  transform: translateY(-50%);
 }
 
 .section-title2 span:before{
-  left: -55%;
+  left: -130px;
 }
 
 .section-title2 span:after{
-  right: -55%;
+  right: -130px;
 }
 
 .parallex{
@@ -140,13 +140,13 @@
 
 .link-button{
   border-radius: 10px;
-  border-radius: none;
   width: 400px;
   height: 60px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   max-width: 100%;
+  text-decoration: none;
 }
 
 .button-type1{
@@ -194,6 +194,7 @@
 .reservation-box .contact-info img{
   width: 24px;
   margin-bottom: 0;
+  margin-right: 15px;
 }
 
 .reservation-box-inner .link-button{
@@ -227,6 +228,7 @@
 
 .line-button span img{
   margin-right: 15px;
+  margin-bottom: 0;
 }
 
 .cooking-price{
@@ -353,14 +355,13 @@
   width: 16px;
   height: 10px;
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-50%,-50%);    
+  left: -7px;
+  top: 7px;
 }
 
 .store-map{
   max-width: 1200px !important;
-  margin: auto;
+  margin: 0 auto 118px;
 }
 
 .gmap-container{
@@ -381,31 +382,178 @@
   --border-offset: 0;
 }
 
-.top-content{
-  max-width: 652px;
-  margin: auto;
-}
-.top-content-logo{
-  max-width: 98px;
-  text-align: center;
-  margin: 0 auto 60px;
-}
-.top-content .site-map{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.top-content .site-map a{
-  background-image: url(https://cdn.shopify.com/s/files/1/0669/8850/7419/files/hexagon.png?v=1666715972);
-  width: 148px;
-  height: 160px;
-  writing-mode: vertical-rl;
-  background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;    
+#shopify-section-template--16706659090750__main #section-reservation{
+  display: none;
 }
 
-.top-content .site-map a:not(:first-child){
-  margin-left: 20px;
+.section-template--16706659090750__main-padding{
+  padding-bottom: 0 !important;
+}
+#Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9{
+  margin-bottom: 114px;
+}
+#Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9 img{
+  max-width: 1360px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9 .banner__media{
+  background-color: transparent;
+}
+.contact{
+  margin-bottom: 116px;
+}
+.u-sp{
+  display: none;
+}
+
+@media(min-width: 768px) and (max-width: 991px)
+{
+  .page-top-description{
+    width: 90%;
+  }
+}
+
+@media(max-width: 767px)
+{
+  .page-top-image{
+    margin: 0 -1.5rem;
+    height: 48vw;
+    overflow: hidden;    
+  }
+  .page-top-description{
+    writing-mode: initial;
+    padding: 37px 50px 48px;
+    font-size: 14px;
+    height: auto;
+    text-align: center;
+    letter-spacing: -0.1em;
+    margin-top: -30px !important;
+    justify-content: center;
+  }
+  .page-top-description p{
+    line-height: 2.4em;
+    margin: 0;
+  }
+  .u-sp{
+    display: block;
+  }  
+  .section-title2 span:before, .section-title2 span:after{
+    width: 50px;
+  }
+  .parallex {
+      min-height: 55vw;
+      margin: 0 -1.5rem;
+  } 
+  .reservation-box-inner .link-button{
+    margin-bottom: 57px;
+    width: 275px;
+    margin-top: 30px;
+  } 
+  .reservation-box-inner{
+    max-width: 275px;
+  }
+  .reservation-box .border-bottom{
+    margin-top: 37px;
+  }
+  .section-title2, .sub-title{
+    font-size: 18px;
+  }
+  .sub-title2:before{
+    width: 38px;
+    height: 38px;
+  }
+  .sub-title span:before{
+    width: 40px;
+    height: 40px;    
+  }
+  .sub-title{
+    letter-spacing: -1px;
+  }
+  .section-title2 span:before{
+    left: -15vw;
+  }
+  .section-title2 span:after{
+    right: -15vw;
+  }
+  .section-title1{
+    font-size: 20px;
+  }
+  .section-title1 span:before{
+    width: 120px;
+  }  
+  .section-title1 span:after{
+    width: 88px;
+    right: -20%;
+  }
+  .copyright__content{
+    font-size: 10px;
+  }
+  .cooking-top-desc{
+    margin-top: 97px;
+  }
+  .line-button span{
+    width: 335px;
+    height: 80px;
+    font-size: 27px; 
+    padding-bottom: 10px;   
+  }
+  .first-section {
+      margin-top: 100px!important;
+  }  
+  .recommends{
+    padding: 50px 20px 60px;
+  }
+  .section-title3{
+    font-size: 18px;
+  }
+  .recommend-name{
+    font-size: 14px;
+  }
+  .store-info-point table{
+    -webkit-border-horizontal-spacing: 15px;
+  }
+  .store-info-point{
+    margin: auto -15px;
+  }
+  .store-info-point table tr td:first-child{
+    min-width: 70px
+  }
+  .store-info-point table tr td{
+    font-size: 13px;
+  }
+  .gmap-container{
+    height: 42vw;
+  }
+  .map-desc{
+    font-size: 12px;
+  }
+  .store-map+.parallex{
+    height: 43vw;
+    min-height: 0;
+  }
+  .contact .field{
+    display: block !important;
+  }
+  .contact .field__input{
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-top: 10px !important;
+  }
+  .contact__button button{
+    width: 335px;
+    height: 50px;
+  }
+  .contact__button{
+    margin-top: 80px;
+  }
+  .price__regular .price-value{
+    font-size: 20px;
+  }
+  .price-desc{
+    font-size: 12px;
+  }
+  .recommend-item{
+    background-size: 2px 1px;
+  }
 }

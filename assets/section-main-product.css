@@ -333,7 +333,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .product__title > * {
@@ -1251,12 +1251,17 @@ a.product__text {
 }
 .product__title h1 {
   font-size: 20px;
+  font-family: 'Ryo Text PlusN M';
 }
 .price-wrapper{
   border-bottom: 1px solid #B5811E;
+  display: flex;
+  align-items: end;
+  padding-bottom: 10px;  
 }
 .price--large{
   display: inline-block;
+  line-height: 1em !important
 }
 .product__tax{
   display: inline-block;
@@ -1312,7 +1317,65 @@ a.product__text {
   min-height: 40px;
   min-width: 150px;
 }
-#MainProduct-template--16687744352539__main{
-  padding: 0;
+#MainProduct-template--16706659189054__main{
+  padding: 156px 0 0 !important;
 }
 
+.u-sp{
+  display: none;
+}
+
+.shopify-payment-button div[role="button"]
+{
+  border-radius: 5px;
+}
+.price__regular .price-item--regular{
+  font-size: 32px;
+  margin-right: 15px;
+}
+.price__regular .price-item--regular small, .product__tax{
+  font-size: 14px;
+}
+
+@media(max-width: 767px)
+{
+  .u-pc{
+    display: none;
+  }
+  .u-sp{
+    display: block;
+  }
+  .gallery-description{
+    display: none;
+  }
+  .product__title h1{
+    font-size: 22px;
+    margin-top: 50px;
+  }
+  .price__regular .price-item--regular{
+    font-size: 22px;
+  }
+  .price__regular .price-item--regular small, .product__tax caption{
+    font-size: 13px;
+  }
+  .line-item-property__field input, .line-item-property__field select{
+    width: 335px;
+  }
+  .product-form{
+    margin-top: 50px;
+  }
+  .product-metafields{
+    margin-top: 60px;
+    margin-bottom: 50px;    
+  }
+  .product-metafields table td {
+      display: block;
+      width: 100% !important;
+      border: none;
+  }
+  .price-wrapper{
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

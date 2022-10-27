@@ -304,7 +304,7 @@
         {%- endif -%}
       </media-gallery>
       <p class="gallery-description">※上記画像は調理・盛り付け例です</p>
-      <div class="product-metafields">
+      <div class="product-metafields u-pc">
         <p class="product-description">{{product.description}}</p>
         <table>
           <tbody>
@@ -365,7 +365,7 @@
                 {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                   <div class="product__tax caption rte">
                     {%- if shop.taxes_included -%}
-                      {{ 'products.product.include_taxes' | t }}
+                      （税込）
                     {%- endif -%}
                     {%- if shop.shipping_policy.body != blank -%}
                       {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
@@ -380,12 +380,6 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
-            {%- when 'description' -%}
-              {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden">
-                  {{ product.description }}
-                </div>
-              {%- endif -%}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
@@ -837,6 +831,33 @@
         </a>
       </div>
     </div>
+    <div class="product-metafields u-sp">
+      <p class="product-description">{{product.description}}</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>商品名</td>
+            <td>{{ product.title }}</td>
+          </tr>          
+          <tr>
+            <td>内容量</td>
+            <td>{{ product.metafields.custom.volume.value }}</td>
+          </tr>
+          <tr>
+            <td>賞味期限</td>
+            <td>{{ product.metafields.custom.expiration.value }}</td>
+          </tr>
+          <tr>
+            <td>原材料名</td>
+            <td>{{ product.metafields.custom.material.value }}</td>
+          </tr>
+          <tr>
+            <td>アレルゲン情報</td>
+            <td>{{ product.metafields.custom.allergy.value }}</td>
+          </tr>                                    
+        </tbody>
+      </table>
+    </div>    
     {%- if section.settings.media_position == 'right' -%}
       <div class="grid__item product__media-wrapper small-hide">
         <media-gallery

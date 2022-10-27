@@ -12,26 +12,31 @@
     list-style: none;
 }
 
-#shopify-section-sidebar ul li:after{
+#shopify-section-sidebar ul li:not(:last-child):after{
     content: "";
     display: block;
     height: 5px;
-    background-image: url(http://placehold.it/350x65);
+    background-image: url('https://cdn.shopify.com/s/files/1/0667/7699/0014/files/sidemenu-item-border.png?v=1666753409');
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 
-#shopify-section-sidebar ul li a {
-    padding: 10px 0;
+#shopify-section-sidebar ul li a, .header__active-menu-item {
+    padding: 27px 0;
     display: block;
     color: #333333;
     border-bottom: 1px solid rgba(255,255,255,.1);
-    font: 14px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.header__menu-item:hover span{
     text-decoration: none;
 }
 
 #shopify-section-sidebar ul li a:hover{
     color: #B5811E;
+    text-decoration: none;
 }
 
 .sidebar-logo{
@@ -41,4 +46,11 @@
 
 .mb-xlg{
     margin-bottom: 120px;
+}
+
+@media(max-width: 990px)
+{
+    #shopify-section-sidebar {    
+        display: none;
+    }
 }

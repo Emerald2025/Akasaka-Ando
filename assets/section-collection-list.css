@@ -16,6 +16,7 @@
   font-size: 20px;
   margin: 116px 0 0;
   text-align: center;
+  font-family: 'Ryo Text PlusN M';
 }
 
 .collection-title span{
@@ -88,18 +89,18 @@
   writing-mode: vertical-rl;
 }
 
-#Banner-template--16690664374586__c5698ba9-7ceb-4f69-950a-ea7e823eb39e .banner__media {
+#Banner-template--16706659057982__2bd58e47-0336-43a5-bf20-822f0ab62c61 .banner__media {
   background-color: transparent;
 }
 
-#Banner-template--16690664374586__c5698ba9-7ceb-4f69-950a-ea7e823eb39e img{
+#Banner-template--16706659057982__2bd58e47-0336-43a5-bf20-822f0ab62c61 img{
     max-width: 1200px;
     margin: auto;
     left: 50%;
     transform: translateX(-50%);
 }
 
-#shopify-section-template--16690664374586__1972f04b-2d88-4bff-883d-897fbfb6fa35 .rich-text{
+#shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text{
   max-width: 512px;
   margin: auto;
   background: #ffffffbf;
@@ -128,12 +129,13 @@
   margin-top: 46px;
 }
 
-#shopify-section-template--16690664374586__1972f04b-2d88-4bff-883d-897fbfb6fa35 .rich-text__text.rte{
+#shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text__text.rte{
     writing-mode: vertical-rl;
     text-align: left;
     margin: auto;
     font-size: 20px;
     line-height: 2.5em;
+    letter-spacing: .2em;
 }
 @media screen and (max-width: 749px) {
   .slider.collection-list--1-items {
@@ -164,4 +166,30 @@
 
 .collection-list-view-all {
   margin-top: 2rem;
+}
+
+@media(max-width: 767px)
+{
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text{
+    margin-top: -30px;
+  }
+  #Banner-template--16706659057982__2bd58e47-0336-43a5-bf20-822f0ab62c61 .banner__media{
+    height: 48vw;
+  }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b{
+    width: 90vw;
+    margin: auto;
+  }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text__wrapper{
+    padding: 0;
+  }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text__text.rte{
+    writing-mode: initial;
+    text-align: center;
+    font-size: 18px;
+  }
+  .collection-list .grid--2-col-desktop .grid__item{
+    width: 100%;
+    max-width: 100%;
+  }  
 }

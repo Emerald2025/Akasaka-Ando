@@ -2,6 +2,7 @@
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/footer-bg.png?v=1666430019);
   background-size: 100% 100%;
+  background-color: transparent;
 }
 
 .footer:not(.color-background-1) {
@@ -9,8 +10,8 @@
 }
 
 .footer__content-top {
-  padding-bottom: 5rem;
-  display: block;
+  padding-bottom: 9.6rem;
+  display: block;g
 }
 
 @media screen and (max-width: 749px) {
@@ -151,13 +152,16 @@
 }
 
 .footer-block__heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   margin-top: 0;
-  font-size: 14px;
+  font-size: 14px !important;
+  font-family: 'Ryo Text PlusN M';
+  text-align: center;
 }
 
-.footer-block-image{
+.footer-block-image img{
   width: 78px;
+  margin-bottom: 37px;
 }
 
 @media screen and (min-width: 990px) {
@@ -520,5 +524,14 @@ noscript .localization-selector.link {
     .footer__content-top .grid__item {
       padding-left: 3rem;
     }
+  }
+}
+
+@media(max-width: 767px){
+  .footer{
+    padding-top: 40px;
+  }
+  .footer__content-top{
+    padding-bottom: 38px;
   }
 }

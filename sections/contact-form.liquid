@@ -17,7 +17,8 @@
 <div class="">
   <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
-    <h3 class="section-title1 page-section-title"><span>{{ section.settings.heading | escape }}</span></h3>      
+    <h3 class="section-title1 page-section-title"><span>{{ section.settings.heading | escape }}</span></h3>
+    <p class="text-center">当店へのご質問などございましたら<br class="u-sp">お気軽にお問い合わせください。</p>
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
@@ -39,7 +40,7 @@
       <div class="contact__fields">
         <div class="field">
           <label class="required">お名前<span class="required-mark">必須</span></label>
-          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}" required>
           <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
         </div>
         <div class="field not-required">
@@ -64,6 +65,7 @@
               aria-describedby="ContactForm-email-error"
             {% endif %}
             placeholder="{{ 'templates.contact.form.email' | t }}"
+            required
           >
           <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
           {%- if form.errors contains 'email' -%}
@@ -82,6 +84,7 @@
           class="text-area field__input"
           name="contact[{{ 'templates.contact.form.comment' | t }}]"
           placeholder="{{ 'templates.contact.form.comment' | t }}"
+          required
         >
           {{- form.body -}}
         </textarea>

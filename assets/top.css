@@ -1,0 +1,67 @@
+.top-content{
+  max-width: 652px;
+  margin: auto;
+}
+.top-content-logo{
+  max-width: 98px;
+  text-align: center;
+  margin: 0 auto 60px;
+}
+.top-content .site-map{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.top-content .site-map a{
+  background-image: url(https://cdn.shopify.com/s/files/1/0669/8850/7419/files/hexagon.png?v=1666715972);
+  width: 148px;
+  height: 160px;
+  writing-mode: vertical-rl;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333333;   
+}
+
+.top-content .site-map a:not(:first-child){
+  margin-left: 20px;
+}
+.align-items-center{
+  align-items: center;
+}
+.page-top{
+  min-height: 100vh;
+}
+.u-pc{
+  display: block;
+}
+.u-sp{
+  display: none;
+}
+@media(max-width: 767px)
+{
+  .u-pc{
+    display: none    
+  }
+  .u-sp{
+    display: block;
+  }
+  .top-content-logo{
+    max-width: 80px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .top-content .site-map{
+    margin-bottom: -10px;
+  }
+}
+
+@media(max-width: 399px){
+  .top-content .site-map a{
+    width: 119px;
+    height: 128px;
+    font-size: 12px;
+  }
+}

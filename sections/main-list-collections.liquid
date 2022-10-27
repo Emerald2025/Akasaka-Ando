@@ -19,7 +19,7 @@
     if moduloResult == 0
       assign paginate_by = 28
     endif
-  -%}
+  -%} 
   {%- paginate collections by paginate_by -%}
     <div class="collection-list">
       {%- for collection in collections -%}
@@ -34,7 +34,27 @@
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }} NoMediaStandardBadge-{{ section_id }}-{{ product.id }}"
                 >
-                  <img src="{% if product.featured_media.size > 0 %}{{ product.featured_media | img_url: product_image_size, scale: product_image_scale }}{% else %}https://cdn.shopify.com/s/files/1/0668/2089/9130/files/no-image.png?v=1666617746{% endif %}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media"></a>
+                  {% if product.featured_media.size > 0 %}
+                    {%- liquid
+                      assign media_count = 0
+                    -%} 
+                    {%- for media in product.media -%}
+                      {%- if media_count == 0 -%}
+                        <div class="product__media media media--transparent gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
+                          {{ media.preview_image | image_url: width: 1946 | image_tag:
+                            loading: lazy,
+                            sizes: sizes,
+                            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+                            alt: media.preview_image.alt | escape
+                          }}
+                        </div> 
+                        increment media_count
+                      {%- endif -%}
+                    {%- endfor -%}  
+                  {% else %}
+                    <img src="https://cdn.shopify.com/s/files/1/0668/2089/9130/files/no-image.png?v=1666617746" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media">                  
+                  {%- endif -%}                                   
+                </a>
                 <a
                 href="{{ product.url }}"
                 id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
