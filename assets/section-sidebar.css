@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+#shopify-section-sidebar .list-menu{
+    padding-left: 0;
+}
+
 #shopify-section-sidebar ul li{
     list-style: none;
 }

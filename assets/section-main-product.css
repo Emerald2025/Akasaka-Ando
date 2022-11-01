@@ -1333,6 +1333,9 @@ a.product__text {
   font-size: 32px;
   margin-right: 15px;
 }
+.price__regular .price-item--regular small{
+  margin-left: 15px;
+}
 .price__regular .price-item--regular small, .product__tax{
   font-size: 14px;
 }
@@ -1377,5 +1380,11 @@ a.product__text {
     display: block;
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+  .price__regular .price-item--regular small{
+    margin-left: 12px;
+  } 
+  #MainProduct-template--16706659189054__main{
+    padding: 150px 0 0!important;
   }
 }

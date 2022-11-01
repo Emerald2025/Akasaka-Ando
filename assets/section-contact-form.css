@@ -54,6 +54,7 @@
   font-size: 12px;
   margin-left: 15px;
   padding: 4px 5px;
+  border-radius: 2px;
 }
 .contact__button button{
     width: 400px;
@@ -77,9 +78,26 @@
 @media screen and (min-width: 750px) {
   .contact__button {
     margin-top: 10rem;
-  }
+  }  
 }
 
 .text-area.field__input{
   min-height: 15rem;
+}
+
+@media screen and (max-width: 767px){
+  .contact__button button {
+    width: 335px;
+    height: 50px;
+    border-radius: 5px;
+  }   
+  #ContactForm{
+    margin-top: 55px;
+  }
+  .contact .field{
+    padding: 30px 0;
+  }
+  .contact {
+    margin-bottom: 100px;
+  }
 }

@@ -22,9 +22,10 @@
   -%} 
   {%- paginate collections by paginate_by -%}
     <div class="collection-list">
-      {%- for collection in collections -%}
+      {% for link in linklists.all-collections.links %}
+        {% assign collection = link.object %}
         <div class="collection-wrapper">
-          <h3 class="collection-title"><span>{{ collection.title }}</span></h3>
+          <div class="text-center"><h3 class="collection-title"><span>{{ collection.title }}</span></h3><div>
           <ul class="product-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
             {%- for product in collection.products -%}
               <li class="collection-list__item grid__item">

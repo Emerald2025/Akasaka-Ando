@@ -530,6 +530,7 @@ noscript .localization-selector.link {
 @media(max-width: 767px){
   .footer{
     padding-top: 40px;
+    margin-top: 0;
   }
   .footer__content-top{
     padding-bottom: 38px;

@@ -248,6 +248,14 @@
     if (Shopify.designMode) {
       document.documentElement.classList.add('shopify-design-mode');
     }
+    (function(d) {
+      var config = {
+        kitId: 'inz0tgf',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);    
     </script>
   </head>
 
@@ -304,7 +312,7 @@
           {%- if settings.cart_type == 'drawer' -%}
             {%- render 'cart-drawer' -%}
           {%- endif -%}
-          {% section 'header' %}          
+          {% section 'header' %}
           <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
             {{ content_for_layout }}
           </main>

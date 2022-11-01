@@ -53,8 +53,11 @@
   font-family: 'Ryo Text PlusN M';
 }
 
-.page-section-title span{
+.page-section-title{
   position: relative;
+  max-width: 832px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title1 span:before,.section-title1 span:after{
@@ -65,7 +68,7 @@
   position: absolute;
 }
 
-.section-title1 span:before{
+/*.section-title1 span:before{
   background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset5.png?v=1666425008);
   left: 0;
   bottom: 0;
@@ -73,23 +76,43 @@
   width: 140px;
   height: 40px;  
 
+}*/
+
+.section-title1 span{
+  position: relative;
+  z-index: 9;
 }
 
-.section-title1 span:after{
-  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset2.png?v=1666425008);
-  width: 100px;
-  height: 25px;
-  right: -30%;
-  bottom: 0;
-  transform: translateX(100%);
+.section-title1:after{
+  background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset6.png?v=1667213066);
+  width: 336px;
+  height: 37px;
+  content: '';
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute; 
+  top: -30%;
+  left: 28%;   
+}
+
+.kaiseki-point, .cooking-point{
+  text-align: center;
 }
 
 .sub-title{
   font-size: 20px;
   margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
 }
 
-.sub-title span:before{
+.sub-title span{
+  position: relative;
+  z-index: 9;
+}
+
+.sub-title:before{
   content: '';
   background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset1.png?v=1666425008);
   background-size: 100% auto;
@@ -106,6 +129,7 @@
 .section-title2{
   font-size: 20px;
   margin-bottom: 47px;
+  position: relative;
 }
 
 .section-title2 span:before,.section-title2 span:after{
@@ -198,11 +222,12 @@
 }
 
 .reservation-box-inner .link-button{
-  margin-bottom: 90px;
+  margin-bottom: 37px;
 }
 
 .reservation-wrapper{
   margin-top: 120px;
+  text-align: center;
 }
 
 .cooking-top-desc{
@@ -219,16 +244,17 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-family: Heisei Maru Gothic Std;
   color: white;
   font-size: 30px;
-  width: 360px;
-  height: 70px;
+  width: 370px;
+  height: 80px;
+  font-family: heisei-maru-gothic-std, sans-serif;
+  font-weight: 800;
+  font-style: normal;  
 }
 
 .line-button span img{
-  margin-right: 15px;
-  margin-bottom: 0;
+  margin-right: 10px;
 }
 
 .cooking-price{
@@ -396,6 +422,7 @@
   max-width: 1360px;
   left: 50%;
   transform: translateX(-50%);
+  height: auto;
 }
 #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9 .banner__media{
   background-color: transparent;
@@ -405,6 +432,10 @@
 }
 .u-sp{
   display: none;
+}
+
+.kodawari-point{
+  text-align: center;
 }
 
 @media(min-width: 768px) and (max-width: 991px)
@@ -445,8 +476,11 @@
       min-height: 55vw;
       margin: 0 -1.5rem;
   } 
+  .reservation-wrapper{
+    margin-top: 100px;
+  }
   .reservation-box-inner .link-button{
-    margin-bottom: 57px;
+    margin-bottom: 27px;
     width: 275px;
     margin-top: 30px;
   } 
@@ -463,7 +497,7 @@
     width: 38px;
     height: 38px;
   }
-  .sub-title span:before{
+  .sub-title:before{
     width: 40px;
     height: 40px;    
   }
@@ -471,20 +505,22 @@
     letter-spacing: -1px;
   }
   .section-title2 span:before{
-    left: -15vw;
+    left: -17vw;
   }
   .section-title2 span:after{
-    right: -15vw;
+    right: -17vw;
   }
   .section-title1{
     font-size: 20px;
   }
-  .section-title1 span:before{
+/*  .section-title1 span:before{
     width: 120px;
-  }  
-  .section-title1 span:after{
-    width: 88px;
-    right: -20%;
+  }  */
+  .section-title1:after{
+    background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset6_sp.png?v=1667213066);
+    width: 294px;
+    height: 32px;
+    left: 6%;
   }
   .copyright__content{
     font-size: 10px;
@@ -493,10 +529,12 @@
     margin-top: 97px;
   }
   .line-button span{
-    width: 335px;
-    height: 80px;
-    font-size: 27px; 
-    padding-bottom: 10px;   
+    width: 350px;
+    height: 70px;
+    font-size: 27px;  
+  }
+  .line-button span img{
+    width: 42px;
   }
   .first-section {
       margin-top: 100px!important;
@@ -506,6 +544,9 @@
   }
   .section-title3{
     font-size: 18px;
+  }
+  .section-title3 span{
+    position: relative;
   }
   .recommend-name{
     font-size: 14px;
@@ -554,6 +595,26 @@
     font-size: 12px;
   }
   .recommend-item{
-    background-size: 2px 1px;
+    background-size: 7px 1px;
+  }
+  #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9{
+    margin-bottom: 73px;
+  }
+  #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9 img{
+    max-height: 180px;
+    overflow: hidden;
+  }
+  .link-button{
+    border-radius: 5px;
+    margin: 80px 0 100px;
+  }  
+  .line-button{
+    margin: 28px 0 100px;
+  } 
+  .section-title1{
+    margin-bottom: 27px;
+  }
+  .sub-title{
+    margin-bottom: 40px;
   }
 }
