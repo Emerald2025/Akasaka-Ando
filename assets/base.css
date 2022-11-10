@@ -259,6 +259,8 @@ html.no-js .no-js-hidden {
   bottom: 39px;
   right: 39px;
   cursor: pointer !important;
+  opacity: 0;
+  transition: opacity .5s;
 }
 
 @media screen and (min-width: 750px) {
@@ -584,6 +586,9 @@ table:not([class]) th {
 @media screen and (max-width: 749px) {
   .small-hide {
     display: none !important;
+  }
+  .page-section p:not(.page-section-title){
+    font-size: 14px;
   }
 }
 
@@ -2322,6 +2327,7 @@ input[type='checkbox'] {
 
 .header > .header__heading-link {
   line-height: 0;
+  display: none;
 }
 
 .header__heading,
@@ -2369,7 +2375,14 @@ input[type='checkbox'] {
   }
   #MainContent{
     transform: translateY(-70px);
-  }  
+  }
+  .to-top{
+    right: 16px;
+    bottom: 16px;
+  }
+  .to-top img{
+    width: 52px;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -2929,6 +2942,17 @@ details-disclosure > details {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    margin-left: 220px;
+}
+
+@media(max-width: 991px)
+{
+  #content{
+    margin-left: 0;    
+  }
+  .header{
+    padding: 16px !important; 
+  }
 }
 
 /* check for flexbox gap in older Safari versions */

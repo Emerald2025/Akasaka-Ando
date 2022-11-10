@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+#shopify-section-sidebar.sidebar_relative{
+  position: relative;
+  width: 100%;
+}
+
 @media screen and (min-width: 750px) {
   .rich-text__wrapper {
     width: 100%;

@@ -29,7 +29,6 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
   }
 
   .header__heading-logo {
@@ -100,8 +99,7 @@
 
   @media screen and (min-width: 990px) {
     .header {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding: 16px;
     }
   }
 {%- endstyle -%}
@@ -137,7 +135,7 @@
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 <div class="text-center">
-                   <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" class="header-logo">
+                   <a href="{{ shop.url }}"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" class="header-logo"></a>
                 </div>
                 <nav class="menu-drawer__navigation">
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">

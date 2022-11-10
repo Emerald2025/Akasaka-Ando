@@ -30,7 +30,7 @@
 .page-top-description{
   width: 100%;
   margin: auto;
-  background: #ffffffbf;
+  background:  rgb(255 255 255 / 90%); 
   writing-mode: vertical-rl;
   padding: 57px 105px 100px;
   height: 608px;
@@ -171,6 +171,7 @@
   align-items: center;
   max-width: 100%;
   text-decoration: none;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);  
 }
 
 .button-type1{
@@ -190,7 +191,7 @@
 
 .reservation-box{
   border: 1px solid #333333;
-  margin-top: 58px;
+  margin-top: 58px !important;
 }
 
 .reservation-box-inner{
@@ -205,14 +206,16 @@
 .reservation-box .border-bottom{
   padding-bottom: 17px;
   border-bottom: 1px solid #333;
-  margin-top: 50px;
+  margin: 47px 0 30px;
+  font-size: 18px;
 }
 
 .reservation-box .contact-info{
   font-size: 26px;
   display: flex;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
+  margin-bottom: 46px;
 }
 
 .reservation-box .contact-info img{
@@ -222,7 +225,7 @@
 }
 
 .reservation-box-inner .link-button{
-  margin-bottom: 37px;
+  margin-bottom: 40px;
 }
 
 .reservation-wrapper{
@@ -246,11 +249,13 @@
   align-items: center;
   color: white;
   font-size: 30px;
-  width: 370px;
-  height: 80px;
+  width: 360px;
+  height: 70px;
   font-family: heisei-maru-gothic-std, sans-serif;
   font-weight: 800;
-  font-style: normal;  
+  font-style: normal;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+  border-radius: 10px;
 }
 
 .line-button span img{
@@ -434,8 +439,20 @@
   display: none;
 }
 
-.kodawari-point{
+.kodawari-point {
   text-align: center;
+}
+
+.kodawari-point p:not(.page-section-title){
+  text-align: left;
+}
+
+.section-title3 span{
+  position: relative;
+}
+
+#section-reservation .page-section-title{
+  margin-bottom: 37px;
 }
 
 @media(min-width: 768px) and (max-width: 991px)
@@ -448,9 +465,9 @@
 @media(max-width: 767px)
 {
   .page-top-image{
-    margin: 0 -1.5rem;
-    height: 48vw;
-    overflow: hidden;    
+    overflow: hidden;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;       
   }
   .page-top-description{
     writing-mode: initial;
@@ -466,6 +483,9 @@
     line-height: 2.4em;
     margin: 0;
   }
+  .u-pc{
+    display: none;
+  }
   .u-sp{
     display: block;
   }  
@@ -479,16 +499,31 @@
   .reservation-wrapper{
     margin-top: 100px;
   }
+  .reservation-box{
+    margin-top: 45px !important;
+  }
   .reservation-box-inner .link-button{
-    margin-bottom: 27px;
     width: 275px;
-    margin-top: 30px;
+    margin: 0px 0px 20px;
+    height: 46px;
   } 
   .reservation-box-inner{
     max-width: 275px;
   }
   .reservation-box .border-bottom{
     margin-top: 37px;
+    padding-bottom: 18px;
+  }
+  .border-bottom{
+    font-size: 16px !important;
+  }
+  .reservation-box .contact-info{
+    font-size: 20px !important;
+    margin: -4px 0 38px;
+  }
+  .reservation-box .contact-info img{
+    width: 19px;
+    margin-right: 6px;
   }
   .section-title2, .sub-title{
     font-size: 18px;
@@ -529,9 +564,10 @@
     margin-top: 97px;
   }
   .line-button span{
-    width: 350px;
-    height: 70px;
-    font-size: 27px;  
+    width: 335px;
+    height: 65px;
+    font-size: 27px;
+    padding-top: 3px;  
   }
   .line-button span img{
     width: 42px;
@@ -544,9 +580,6 @@
   }
   .section-title3{
     font-size: 18px;
-  }
-  .section-title3 span{
-    position: relative;
   }
   .recommend-name{
     font-size: 14px;
@@ -598,7 +631,8 @@
     background-size: 7px 1px;
   }
   #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9{
-    margin-bottom: 73px;
+    margin-bottom: 63px;
+    margin-top: -1rem;
   }
   #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9 img{
     max-height: 180px;
@@ -607,6 +641,8 @@
   .link-button{
     border-radius: 5px;
     margin: 80px 0 100px;
+    width: 335px;
+    height: 50px;    
   }  
   .line-button{
     margin: 28px 0 100px;
@@ -616,5 +652,30 @@
   }
   .sub-title{
     margin-bottom: 40px;
+  }
+  .kodawari-point p:not(.page-section-title), .cooking-top-desc{
+    font-size: 14px;
+  }
+  .cooking-price{
+    font-size: 13px !important;
+  }
+  #cooking-top{
+    margin-top: -4.5rem;
+    height: calc(48vw + 3.5rem);     
+  }
+  #kaiseki-top{
+    margin-top: -4rem;
+    height: calc(48vw + 3rem);    
+  }
+  #store-info-top{
+    margin-top: -1rem;
+    height: 48vw;
+  }
+  .sub-title2 span{
+    font-size: 14px;
+  }
+
+  #section-reservation .page-section-title{
+    margin-bottom: 30px;
   }
 }

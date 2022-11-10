@@ -945,3 +945,54 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+document.addEventListener("scroll", handleScroll);
+// get a reference to our predefined button
+var scrollToTopBtn = document.querySelector(".to-top");
+
+function handleScroll() {
+  var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var GOLDEN_RATIO = 0.3;
+
+  if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
+    //show button
+    scrollToTopBtn.style.opacity = 1;
+  } else {
+    //hide button
+    scrollToTopBtn.style.opacity = 0;
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+let top_base = 460;
+window.onscroll = function fix_element() {
+  if(window.innerHeight <= document.getElementById("shopify-section-sidebar").clientHeight){
+    let stop_offset = document.getElementById("footer").offsetTop;
+    let stop_height = document.getElementById("footer").offsetHeight;        
+    let cur_pos_top = window.scrollY;
+    let cur_pos_bottom = cur_pos_top + window.innerHeight;
+    if(cur_pos_top >  top_base){
+      if(cur_pos_bottom > stop_offset){
+        document.getElementById("shopify-section-sidebar").classList.remove("sidebar_relative");
+        document.getElementById("shopify-section-sidebar").classList.add("fixed_bottom");
+      }    
+      else{
+        document.getElementById("shopify-section-sidebar").classList.add("sidebar_relative");  
+        document.getElementById("shopify-section-sidebar").classList.remove("fixed_bottom"); 
+      }         
+    }
+    else{
+      document.getElementById("shopify-section-sidebar").classList.remove("sidebar_relative");
+      document.getElementById("shopify-section-sidebar").classList.remove("fixed_bottom");
+    }  
+  }
+}; 
+
