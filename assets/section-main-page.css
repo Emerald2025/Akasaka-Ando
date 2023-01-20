@@ -57,7 +57,7 @@
   position: relative;
   max-width: 832px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;  
 }
 
 .section-title1 span:before,.section-title1 span:after{
@@ -68,15 +68,15 @@
   position: absolute;
 }
 
-/*.section-title1 span:before{
-  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset5.png?v=1666425008);
+/* .section-title1 span:before{
+  background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset5.png?v=1666753409);
   left: 0;
   bottom: 0;
   transform: translateX(-100%); 
   width: 140px;
   height: 40px;  
 
-}*/
+} */
 
 .section-title1 span{
   position: relative;
@@ -93,11 +93,7 @@
   display: block;
   position: absolute; 
   top: -30%;
-  left: 28%;   
-}
-
-.kaiseki-point, .cooking-point{
-  text-align: center;
+  left: 28%;     
 }
 
 .sub-title{
@@ -107,6 +103,10 @@
   display: inline-block;
 }
 
+.kaiseki-point,.cooking-point{
+  text-align: center;
+}
+
 .sub-title span{
   position: relative;
   z-index: 9;
@@ -114,7 +114,7 @@
 
 .sub-title:before{
   content: '';
-  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset1.png?v=1666425008);
+  background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset1.png?v=1666753409);
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
@@ -126,10 +126,13 @@
   transform: translate(-50%,-50%);
 }
 
+.section-title2 span{
+  position: relative;
+}
+
 .section-title2{
   font-size: 20px;
   margin-bottom: 47px;
-  position: relative;
 }
 
 .section-title2 span:before,.section-title2 span:after{
@@ -164,6 +167,7 @@
 
 .link-button{
   border-radius: 10px;
+  border-radius: none;
   width: 400px;
   height: 60px;
   display: inline-flex;
@@ -171,7 +175,7 @@
   align-items: center;
   max-width: 100%;
   text-decoration: none;
-  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);  
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);   
 }
 
 .button-type1{
@@ -215,7 +219,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 46px;
+  margin-bottom: 46px;  
 }
 
 .reservation-box .contact-info img{
@@ -242,7 +246,7 @@
 }
 
 .line-button span{
-  background-image: url("https://cdn.shopify.com/s/files/1/0668/2089/9130/files/line-bg.png?v=1666421704");
+  background-image: url("https://cdn.shopify.com/s/files/1/0667/7699/0014/files/line-bg_cdc85752-cda4-4b33-8955-f672fa1be697.png?v=1667878069");
   background-size: 100% 100%;
   display: inline-flex;
   justify-content: center;
@@ -254,7 +258,7 @@
   font-family: heisei-maru-gothic-std, sans-serif;
   font-weight: 800;
   font-style: normal;
-  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);   
   border-radius: 10px;
 }
 
@@ -299,7 +303,7 @@
 
 .section-title3:before{
   content: "";
-  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset4.png?v=1666425008);
+  background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset4.png?v=1666753407);
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
@@ -325,7 +329,7 @@
 
 .sub-title2:before{
   content: '';
-  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/title_asset3.png?v=1666425008);
+  background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset3.png?v=1666753407);
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
@@ -379,7 +383,7 @@
 
 .store-info-note p:before{
   content: '';
-  background-image: url(https://cdn.shopify.com/s/files/1/0668/2089/9130/files/note-mark.png?v=1666576981);
+  background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/note-mark.png?v=1666753407);
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
@@ -387,7 +391,7 @@
   height: 10px;
   position: absolute;
   left: -7px;
-  top: 7px;
+  top: 7px;   
 }
 
 .store-map{
@@ -438,7 +442,6 @@
 .u-sp{
   display: none;
 }
-
 .kodawari-point {
   text-align: center;
 }
@@ -446,15 +449,15 @@
 .kodawari-point p:not(.page-section-title){
   text-align: left;
 }
-
 .section-title3 span{
   position: relative;
-}
-
+} 
 #section-reservation .page-section-title{
   margin-bottom: 37px;
 }
-
+.top-general.page-top-image img{
+  max-width: min(100%, 1200px);
+}
 @media(min-width: 768px) and (max-width: 991px)
 {
   .page-top-description{
@@ -465,9 +468,11 @@
 @media(max-width: 767px)
 {
   .page-top-image{
-    overflow: hidden;
+    overflow: hidden; 
     margin-left: -1.5rem;
-    margin-right: -1.5rem;       
+    margin-right: -1.5rem; 
+    margin-top: -1rem;
+    height: 48vw;
   }
   .page-top-description{
     writing-mode: initial;
@@ -477,15 +482,15 @@
     text-align: center;
     letter-spacing: -0.1em;
     margin-top: -30px !important;
-    justify-content: center;
   }
   .page-top-description p{
     line-height: 2.4em;
     margin: 0;
+    justify-content: center;
   }
   .u-pc{
     display: none;
-  }
+  }  
   .u-sp{
     display: block;
   }  
@@ -496,16 +501,16 @@
       min-height: 55vw;
       margin: 0 -1.5rem;
   } 
-  .reservation-wrapper{
-    margin-top: 100px;
-  }
   .reservation-box{
     margin-top: 45px !important;
-  }
+  }  
+  .reservation-wrapper{
+    margin-top: 100px;
+  }  
   .reservation-box-inner .link-button{
     width: 275px;
     margin: 0px 0px 20px;
-    height: 46px;
+    height: 46px;    
   } 
   .reservation-box-inner{
     max-width: 275px;
@@ -515,16 +520,16 @@
     padding-bottom: 18px;
   }
   .border-bottom{
-    font-size: 16px !important;
+    font-size: 16px !important
   }
   .reservation-box .contact-info{
     font-size: 20px !important;
-    margin: -4px 0 38px;
+    margin: -4px 0 38px;  
   }
   .reservation-box .contact-info img{
     width: 19px;
     margin-right: 6px;
-  }
+  }  
   .section-title2, .sub-title{
     font-size: 18px;
   }
@@ -548,9 +553,9 @@
   .section-title1{
     font-size: 20px;
   }
-/*  .section-title1 span:before{
+/*   .section-title1 span:before{
     width: 120px;
-  }  */
+  }   */
   .section-title1:after{
     background-image: url(https://cdn.shopify.com/s/files/1/0667/7699/0014/files/title_asset6_sp.png?v=1667213066);
     width: 294px;
@@ -566,7 +571,7 @@
   .line-button span{
     width: 335px;
     height: 65px;
-    font-size: 27px;
+    font-size: 27px; 
     padding-top: 3px;  
   }
   .line-button span img{
@@ -580,7 +585,7 @@
   }
   .section-title3{
     font-size: 18px;
-  }
+  } 
   .recommend-name{
     font-size: 14px;
   }
@@ -621,6 +626,28 @@
   .contact__button{
     margin-top: 80px;
   }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text{
+    margin-top: -30px;
+  }
+  #Banner-template--16706659057982__2bd58e47-0336-43a5-bf20-822f0ab62c61 .banner__media{
+    height: 48vw;
+  }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b{
+    width: 90vw;
+    margin: auto;
+  }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text__wrapper{
+    padding: 0;
+  }
+  #shopify-section-template--16706659057982__c0a095a4-595a-4308-aac2-d9e3ccdc019b .rich-text__text.rte{
+    writing-mode: initial;
+    text-align: center;
+    font-size: 18px;
+  }
+  .collection-list .grid--2-col-desktop .grid__item{
+    width: 100%;
+    max-width: 100%;
+  }
   .price__regular .price-value{
     font-size: 20px;
   }
@@ -632,21 +659,21 @@
   }
   #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9{
     margin-bottom: 63px;
-    margin-top: -1rem;
+    margin-top: -1rem;    
   }
   #Banner-template--16706659090750__b0378018-d60f-4b3e-8504-c5acb59d27f9 img{
     max-height: 180px;
     overflow: hidden;
-  }
+  } 
   .link-button{
     border-radius: 5px;
     margin: 80px 0 100px;
     width: 335px;
-    height: 50px;    
-  }  
+    height: 50px;     
+  } 
   .line-button{
     margin: 28px 0 100px;
-  } 
+  }  
   .section-title1{
     margin-bottom: 27px;
   }
@@ -673,9 +700,8 @@
   }
   .sub-title2 span{
     font-size: 14px;
-  }
-
+  }  
   #section-reservation .page-section-title{
     margin-bottom: 30px;
-  }
+  }  
 }
